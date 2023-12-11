@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+        img { 
+            width: 250px; 
+            height: 250px; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div id="c"></div> 
+    <form id="forr"> 
+        <img src="1.jpg" alt="" id="i1"> 
+        <input type="file" id="f1"> 
+        <input type="button" value="Send" onclick="img1();"><br> 
+        <img src="1.jpg" alt="" id="i2"> 
+        <input type="file" id="f2"> 
+        <input type="button" value="Send" onclick="img2();"><br> 
+        <img src="1.jpg" alt="" id="i3"> 
+        <input type="file" id="f3"> 
+        <input type="button" value="Send" onclick="img3();"><br> 
+        <a href="" id="a1">Link</a> 
+        <input type="text" id="l1"> 
+        <input type="button" value="Send" onclick="link1();"><br> 
+        <a href="" id="a2">Link</a> 
+        <input type="text" id="l2"> 
+        <input type="button" value="Send" onclick="link2();"><br> 
+        <a href="" id="a3">Link</a> 
+        <input type="text" id="l3"> 
+        <input type="button" value="Send" onclick="link3();"><br> 
+    </form> 
+    <script> 
+        for(let i = 0; i < document.querySelectorAll("img").length + 1; i++){ 
+            var cimg = document.createTextNode(`Kart ${i} `); 
+        } 
+        for(let j = 0; j < document.querySelectorAll("a").length + 1; j++){ 
+            var clink = document.createTextNode(`Link ${j} `); 
+        } 
+ 
+        var c = document.getElementById("c"); 
+        var count = document.createElement("h2"); 
+        count.appendChild(cimg) 
+        count.appendChild(clink) 
+        c.appendChild(count) 
+ 
+        function img1(){ 
+            var n = document.forms["forr"].elements['f1'].files[0].name; 
+            document.getElementById('i1').src = n; 
+        } 
+        function img2(){ 
+            var n = document.forms["forr"].elements['f2'].files[0].name; 
+            document.getElementById('i2').src = n; 
+        } 
+        function img3(){ 
+            var n = document.forms["forr"].elements['f3'].files[0].name; 
+            document.getElementById('i3').src = n; 
+        } 
+        function link1(){ 
+            var n = document.forms["forr"].elements['l1'].value; 
+            document.getElementById('a1').href = n; 
+        } 
+        function link2(){ 
+            var n = document.forms["forr"].elements['l2'].value; 
+            document.getElementById('a2').href = n; 
+        } 
+        function link3(){ 
+            var n = document.forms["forr"].elements['l3'].value; 
+            document.getElementById('a3').href = n; 
+        } 
+    </script> 
+</body> 
+</html>
