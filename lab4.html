@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+</body>
+<script>class Numbers {
+  number1;
+  number2;
+  constructor(number1, number2) {
+    this.number1 = number1;
+    this.number2 = number2;
+  }
+  sum() {
+    document.writeln(`Сумма = ${this.number1 + this.number2}<br>`);
+  }
+  difference() {
+    document.writeln(`Разность = ${this.number1 - this.number2}<br>`);
+  }
+  work() {
+    document.writeln(`Произведение = ${this.number1 * this.number2}<br>`);
+  }
+  private() {
+    document.writeln(`Частное = ${this.number1 / this.number2}<br>`);
+  }
+}
+
+var num1 = new Numbers(+prompt("Первое число"), +prompt("Второе число"));
+var num2 = new Numbers(+prompt("2Первое число"), +prompt("2Второе число"));
+var num3 = new Numbers(+prompt("3Первое число"), +prompt("3Второе число"));
+var arr = [num1, num2, num3];
+
+for (var i = 0; i < arr.length; i++) {
+  arr[i].sum();
+  arr[i].difference();
+  arr[i].work();
+  arr[i].private();
+}</script>
+</html>
