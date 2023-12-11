@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>if (navigator.userAgent.includes("OPR")) {
+      function operaFunction(x) {
+        return 3 * x + 5;
+      }
+    }
+
+    if (navigator.userAgent.includes("Firefox")) {
+  function firefoxFunction(x) {
+    return x + 3;
+  }
+}
+
+if (navigator.userAgent.includes("Chrome")) {
+  function chromeFunction(x) {
+    return x / 3 + x / 5;
+  }
+}
+
+
+let x = 10;
+
+
+if (navigator.userAgent.includes("OPR")) {
+  console.log(operaFunction(x));
+} else if (navigator.userAgent.includes("Firefox")) {
+  console.log(firefoxFunction(x));
+} else if (navigator.userAgent.includes("Chrome")) {
+  console.log(chromeFunction(x));
+}
+    </script>
+</body>
+</html>
