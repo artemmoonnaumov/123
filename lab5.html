@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>class Animal {
+      constructor(food, location) {
+        this.food = food;
+        this.location = location;
+      }
+    
+      makeNoise() {
+        document.write("Животное издает звук");
+      }
+    
+      eat() {
+        document.write("Животное ест");
+      }
+    
+      sleep() {
+        document.write("Животное спит");
+      }
+    }
+    
+    class Dog extends Animal {
+      constructor(food, location, breed) {
+        super(food, location);
+        this.breed = breed;
+      }
+    
+      makeNoise() {
+        document.write(this.breed + " говорит");
+      }
+    
+      eat(food) {
+        document.write(this.breed + " ест " + food);
+      }
+    
+      sleep() {
+        document.write(this.breed + " спит");
+      }
+    }
+    
+    class Cat extends Animal {
+      constructor(food, location, color) {
+        super(food, location);
+        this.color = color;
+      }
+    
+      makeNoise() {
+        document.write("Кот говорит");
+      }
+    
+      eat(food) {
+        document.write("Кот ест " + food);
+      }
+    
+      sleep() {
+        document.write("Кот спит");
+      }
+    }
+    
+    class Horse extends Animal {
+      constructor(food, location, breed) {
+        super(food, location);
+        this.breed = breed;
+      }
+    
+      makeNoise() {
+        document.write("Лошадь говорит");
+      }
+    
+      eat(food) {
+        document.write("Лошадь ест " + food);
+      }
+    
+      sleep() {
+        document.write("Лошадь спит");
+      }
+    }
+    
+    class Veterinarian {
+      treatAnimal(animal) {
+        document.write("Животное: " + animal.constructor.name);
+        document.write("Ест: " + animal.food);
+        document.write("Место обитания: " + animal.location);
+      }
+    }
+    
+    let dog = new Dog("мясо", "дом", "Далматин");
+    let cat = new Cat("рыбу", "квартира", "рыжий");
+    let horse = new Horse("сено", "ферма", "Арабская");
+    let vet = new Veterinarian();
+    
+    vet.treatAnimal(dog);
+    vet.treatAnimal(cat);
+    vet.treatAnimal(horse);</script>
+</body>
+</html>
