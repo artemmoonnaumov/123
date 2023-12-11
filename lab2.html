@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="" id="s">
+     <input type="text" id="n">
+     <input type="text" id="k">
+     <input type="button" onclick="pr()">
+    </form>
+</body>
+<script>function pr() {
+    var n = document.forms["s"].elements["n"].value;
+    var arr = n.split(" ");
+    var arr2 = [];
+    var k = document.forms["s"].elements["k"].value;
+    var sum = 0;
+  
+    for(var j = 0; j < arr.length; j++) {
+      arr2[j] = +arr[j];
+    }
+  
+    for (var i = 0; i < arr2.length; i++) {
+      if (arr2[i] % k === 0) {
+        sum += arr2[i];
+      }
+    }
+  
+    document.writeln("Сумма элементов, кратных " + k + ": " + sum);
+  }</script>
+</html>
